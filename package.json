@@ -23,7 +23,8 @@
     "react-native-safe-area-context": "^5.1.0",
     "react-native-screens": "^4.5.0",
     "react-native-svg": "^15.11.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "twrnc": "^4.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
