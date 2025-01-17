@@ -6,9 +6,11 @@ module.exports = {
       colors: {
         redprimary: "#db393c",
       },
-      spacing: {
-        '2': '0.5rem',
-      }
+      fontFamily: {
+        Medium: 'BricolageGrotesque_28pt-Medium',
+        Regular: 'BricolageGrotesque_28pt-Regular',
+        SemiBold: 'BricolageGrotesque_28pt-SemiBold',
+      },
     },
   },
   plugins: [],

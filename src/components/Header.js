@@ -8,7 +8,7 @@ const Header = ({navigation}) => {
     <View style={tw`flex-row px-4 py-2 justify-between items-center bg-white shadow-lg`}>
       <Text style={tw`text-base font-semibold text-redprimary`}>Country Live</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Search')}>
-        <MagnifyingGlassIcon color="#000" size={24} />
+        <MagnifyingGlassIcon color="#000" size={20} />
       </TouchableOpacity>
     </View>
   )
