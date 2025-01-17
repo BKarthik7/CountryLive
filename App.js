@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeScreen from './src/HomeScreen'
 import Splash from './src/Splash'
+import Search from './src/Search'
 
 const App = () => {
   const Stack = createNativeStackNavigator()
@@ -12,6 +13,7 @@ const App = () => {
       <Stack.Navigator initialRouteName='Splash' screenOptions={{ headerShown: false }}>
         <Stack.Screen name='Splash' component={Splash} />
         <Stack.Screen name='Home' component={HomeScreen} />
+        <Stack.Screen name='Search' component={Search} />
       </Stack.Navigator>
     </NavigationContainer>
   )
