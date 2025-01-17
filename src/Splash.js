@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import tw from '../lib/tailwind';
 import * as Animatable from 'react-native-animatable';
-import { FadeInDown } from 'react-native-reanimated';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
@@ -13,7 +12,7 @@ const Splash = ({navigation}) => {
   return (
     <View style={tw`flex-1 justify-center items-center bg-redprimary`}>
       <Animatable.Text 
-        style={tw`text-4xl text-white font-bold`} 
+        style={tw`text-4xl text-white font-bold`}
         animation="fadeInDownBig"
         duration={2000}
       >
