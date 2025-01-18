@@ -1,5 +1,5 @@
-import { FlatList, StyleSheet, Text, View, TouchableOpacity, ActivityIndicator } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { FlatList, StyleSheet, Text, View, TouchableOpacity, ActivityIndicator, BackHandler } from 'react-native';
+import React, { useEffect, useState } from 'react';
 import tw from '../lib/tailwind';
 import Header from './components/Header';
 import Card from './components/Card';
@@ -50,9 +50,9 @@ const HomeScreen = ({navigation}) => {
     setLaoding(true);
     const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=668f84ca250b40da8a68ad5ba00e3a9b`);
     const data = await response.json();
-    setData(data.articles)
+    setData(data.articles);
     setLaoding(false);
-  }
+  };
 
   const getData2 = async category => {
     setLaoding(true);
@@ -67,7 +67,16 @@ const HomeScreen = ({navigation}) => {
 
   useEffect(() => {
     getData();
+
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      // This will exit the app when the back button is pressed
+      BackHandler.exitApp();
+      return true;  // Prevent the default back action (e.g., navigating back)
+    });
+
+    return () => backHandler.remove(); // Clean up the event listener when component unmounts
   }, []);
+
   return (
     <>
       {Laoding ? (
@@ -124,8 +133,8 @@ const HomeScreen = ({navigation}) => {
       )}
     </>
   );
-}
+};
 
-export default HomeScreen
+export default HomeScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
