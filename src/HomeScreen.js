@@ -69,12 +69,11 @@ const HomeScreen = ({navigation}) => {
     getData();
 
     const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
-      // This will exit the app when the back button is pressed
       BackHandler.exitApp();
-      return true;  // Prevent the default back action (e.g., navigating back)
+      return true;
     });
 
-    return () => backHandler.remove(); // Clean up the event listener when component unmounts
+    return () => backHandler.remove();
   }, []);
 
   return (
