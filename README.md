@@ -2,6 +2,8 @@
 
 CountryLive is a React Native application that fetches news from [NewsAPI](https://newsapi.org/) and provides features such as search and categories. It uses `twrnc` for styling with Tailwind-like utilities.
 
+https://github.com/user-attachments/assets/5900f131-8a0e-40a1-b770-66834169dac6
+
 ## Features
 
 - Fetches the latest news using [NewsAPI](https://newsapi.org/).
